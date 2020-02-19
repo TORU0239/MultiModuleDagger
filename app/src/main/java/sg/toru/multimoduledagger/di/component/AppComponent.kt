@@ -9,7 +9,7 @@ import sg.toru.multimoduledagger.ui.MainActivity
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = [HamburgerModule::class, HotDogModule::class, ShopModule::class])
+@Component(modules = [HamburgerModule::class, HotDogModule::class])
 interface AppComponent {
     fun shopComponent():ShopComponent
 }
