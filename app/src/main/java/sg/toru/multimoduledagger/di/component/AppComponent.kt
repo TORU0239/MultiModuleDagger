@@ -11,5 +11,5 @@ import javax.inject.Singleton
 @Singleton
 @Component(modules = [HamburgerModule::class, HotDogModule::class, ShopModule::class])
 interface AppComponent {
-    fun inject(activity:MainActivity)
+    fun shopComponent():ShopComponent
 }

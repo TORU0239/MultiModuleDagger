@@ -6,26 +6,23 @@ import sg.toru.multimoduledagger.R
 import sg.toru.multimoduledagger.app.App
 import sg.toru.multimoduledagger.lib.Hamburger
 import sg.toru.multimoduledagger.lib.HotDog
+import sg.toru.multimoduledagger.lib.Shop
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
 
     @Inject
-    lateinit var burger:Hamburger
-
-    @Inject
-    lateinit var dog:HotDog
+    lateinit var shop: Shop
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         initDependencyInjection()
 
-        burger.test()
-        dog.hotDog()
+        shop.printMenu()
     }
 
     private fun initDependencyInjection() {
-        (application as App).appComponent.inject(this)
+        (application as App).appComponent.shopComponent().inject(this)
     }
 }
