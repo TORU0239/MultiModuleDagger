@@ -1,5 +1,6 @@
 package sg.toru.multimoduledagger.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -23,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.txt_main).text = shop.printMenu()
 
         findViewById<TextView>(R.id.btn_next).setOnClickListener {
-
+            startActivity(Intent(this@MainActivity, SecondActivity::class.java))
         }
     }
 
