@@ -11,9 +11,7 @@ class HotDog @Inject constructor(
         Log.e("Toru", "hotDog!!!!")
     }
 
-    fun ingredient() {
-        Log.e("Toru", "we make with ${bun.bunName}, ${sausage.meat}!!")
-    }
+    fun ingredient() = "we make with ${bun.bunName}, ${sausage.meat}!!"
 }
 
 class Sausage {

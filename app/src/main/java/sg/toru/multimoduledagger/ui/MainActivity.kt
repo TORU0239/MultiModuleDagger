@@ -1,6 +1,7 @@
 package sg.toru.multimoduledagger.ui
 
 import android.os.Bundle
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import sg.toru.multimoduledagger.R
 import sg.toru.multimoduledagger.app.App
@@ -19,7 +20,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         initDependencyInjection()
 
-        shop.printMenu()
+        findViewById<TextView>(R.id.txt_main).text = shop.printMenu()
+
+        findViewById<TextView>(R.id.btn_next).setOnClickListener {
+
+        }
     }
 
     private fun initDependencyInjection() {

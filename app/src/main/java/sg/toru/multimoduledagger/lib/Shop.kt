@@ -7,8 +7,5 @@ class Shop @Inject constructor(
     private val hotdog:HotDog
 ) {
 
-    fun printMenu() {
-        hamburger.ingredient()
-        hotdog.ingredient()
-    }
+    fun printMenu() = hamburger.ingredient() + hotdog.ingredient()
 }
