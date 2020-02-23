@@ -4,9 +4,6 @@ import dagger.Component
 import sg.toru.multimoduledagger.di.module.HamburgerModule
 import sg.toru.multimoduledagger.di.module.HardwareShopModule
 import sg.toru.multimoduledagger.di.module.HotDogModule
-import sg.toru.multimoduledagger.di.module.ShopModule
-import sg.toru.multimoduledagger.lib.Shop
-import sg.toru.multimoduledagger.ui.MainActivity
 import javax.inject.Singleton
 
 @Singleton
